@@ -13,29 +13,46 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+
 header{
     box-shadow: 10px 10px 10px #0000001f;
-    padding: 1.3rem 0;
+    padding: 1.3rem 0 0.8rem 0;
 
 }
 header img{
-    width: 70%;
+    width: 45%;
     margin: 0 auto;
 }
 .locate{
     background-color: #EAEAEA;
+    font-weight: 500;
     text-align: center;
+    padding: 0.9rem;
 }
 #reservation{
     background-color: #F6F6F6;
     text-align: center;
+    padding: 1.9rem 0;
+}
+#reservation h1{
+    margin: 0 40px;
+    font-size: 1.55rem;
+}
+#reservation p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0.8rem 0 1rem;
 }
 #reservation .explore{
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 20px;
-    background-color: red;
+    width: 60%;
+    color:white;
+    margin: 1.8rem auto;
+    padding: 1rem 0;
+    border-radius: 25px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 10px 10px 10px #0000001f;
 }
+
 ul{
     display: flex;
     flex-flow: row wrap;
@@ -43,41 +60,85 @@ ul{
     width: 100%;
     padding: 0;
 }
+.card{
+    border-radius:25px;
+
+}
 #fontionnement li{
     width: 80%;
     /* max-width: 400px; */
     margin: 0 auto;
     background-color: grey;
+    padding: 25px;
 }
+#fontionnement .nbr-fonctionnement{
+    display: block;
+    border-radius: 25px;
+    color: white;
+    background-color: #9356DC;
+    width: 15px;
+    height: 15px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+}
+
 #restaurants{
     background-color: #F6F6F6;
+    padding: 3.3rem 0.5rem;
 }
 #restaurants ul  li{
     width: 90%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 #restaurants .card{
-    border-radius:20px;
+    /* border-radius:25px; */
     box-shadow: 10px 10px 10px #0000001f;
 }
-#restaurants .card img{
+#restaurants img{
     width: 100%;
     height: 45vw;
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0;
     object-fit: cover;
 }
 #restaurants .card-txt{
+    display: grid;
+    grid-template: "titre icone" 20px
+                   "text icone" 35px;
     background-color: white;
-    border-radius: 0 0 20px 20px ;
+    padding: 15px 15px 5px;
+    border-radius: 0 0 15px 15px ;
+}
+#restaurants h3{
+    grid-area:titre;
+}
+#restaurants p{
+    grid-area:text ;
+    align-self: center;
+}
+#restaurants i{
+    font-size: 30px;
+    grid-area:icone ;
+    align-self: center;
+    justify-self: center;  
+}
+#restaurants i:hover, #restaurants i:active{
+    font-weight: 800;
+    /* color: linear-gradient(#9356DC, #FF79DA); */
+    color: #9356DC;
+    background-image: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
 
 }
+
+
 
 footer{
     background-color: #353535;
 }
-footer img{
+footer .logo{
     width: 7rem;
+    font-family: 'Shrikhand', cursive;
 }
 footer a{
     color: white;
