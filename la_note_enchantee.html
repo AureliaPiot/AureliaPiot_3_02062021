@@ -5,118 +5,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="CSS/header_footer.css"> -->
+    <link rel="stylesheet" href="CSS/page_style.css">
     <link rel="stylesheet" href="CSS/style_450.css">
+
+
     <!-- <link rel="stylesheet" media="screen and (max-width: 450px)" href="CSS/style_450.css" /> -->
     <!-- ______________________kit font awesome________________________ -->
     <script src="https://kit.fontawesome.com/14964f6394.js" crossorigin="anonymous"></script>
     <!-- ________________Font___________________ -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Font-Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <!-- Font-Shrikhand -->
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <title>projet3</title>
 </head>
+
 <body>
     <div class="loadingScreen"></div>
     <!-- en plein ecran ,fixer-- (ajouter la fleche)-->
     <header>
-        <img src="images/logo/ohmyfood.png" alt="ohmyfood">
+        <a class="header" href="index.html">
+            <i class="fas fa-arrow-left"></i>
+            <img src="images/logo/ohmyfood.png" alt="ohmyfood">
+        </a>
     </header>
-    <img class="fond" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+    <main>
+        <img class="fond" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+        <div class="container">
 
 
-    <div class="container">
 
-    <!-- ____________Titre + heart______________ -->
+            <!-- ____________Titre + heart______________ -->
+            <div class="titre">
+
+                <h1>La note enchantée</h1>
+                <i class="far fa-heart"></i>
+            </div>
+
+            <!-- _____________ENTREES_____________ -->
             
-        <h1>La note enchantée</h1>
-        <i class="far fa-heart"></i>
+                <section id="entrees">
+                    <h2>ENTRÉES</h2>
+                    <ul>
+                        <li class="card -shadow">
+                            <h3>Ravioles de foie gras </h3>
+                            <p class="text">Accompagnés de leur crème à la truffe</p>
+                            <p class="prix">25€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Caviar osciètre</h3>
+                            <p class="text">Sur blini à la farine de blé noir</p>
+                            <p class="prix">35€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Homard et espuma de potiron</h3>
+                            <p class="text">Mariné aux zestes d'orange</p>
+                            <p class="prix">20€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Foie gras de canard cuit entier</h3>
+                            <p class="text">Confiture de figue et pain toasté</p>
+                            <p class="prix">35€</p>
+                        </li>
+                    </ul>
+                </section>
+                <!-- ____________PLATS______________ -->
 
-    <!-- _____________ENTREES_____________ -->
+                <section id="plats">
+                    <h2>PLATS</h2>
+                    <ul>
+                        <li class="card -shadow">
+                            <h3>Noix de coquilles Saint-Jacques</h3>
+                            <p class="text">Sur lit de purée de céleri-rave</p>
+                            <p class="prix">40€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Langoustine poêlée</h3>
+                            <p class="text">Purée de patate douce</p>
+                            <p class="prix">35€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Mijoté de queue de boeuf</h3>
+                            <p class="text">Et riz sauvage aux zestes de citron</p>
+                            <p class="prix">44€</p>
+                        </li>
+                    </ul>
+                </section>
+                <!-- ____________DESSERTS______________ -->
 
-        <section id="entrees">
-            <h2>ENTRÉES</h2>
-            <ul>
-                <li>
-                    <h3>Ravioles de foie gras </h3>
-                    <p class="text">Accompagnés de leur crème à la truffe</p>
-                    <p class="prix">25€</p>
-                </li>
-                <li>
-                    <h3>Caviar osciètre</h3>
-                    <p class="text">Sur blini à la farine de blé noir</p>
-                    <p class="prix">35€</p>
-                </li>
-                <li>
-                    <h3>Homard et espuma de potiron</h3>
-                    <p class="text">Mariné aux zestes d'orange</p>
-                    <p class="prix">20€</p>
-                </li>
-                <li>
-                    <h3>Foie gras de canard cuit entier</h3>
-                    <p class="text">Confiture de figue et pain toasté</p>
-                    <p class="prix">35€</p>
-                </li>
-            </ul>
-        </section>
-    <!-- ____________PLATS______________ -->
+                <section id="desserts">
+                    <h2>DESSERTS</h2>
+                    <ul>
+                        <li class="card -shadow">
+                            <h3>Macaron noisette et chocolat</h3>
+                            <p class="text">Glace au caramel brun et sel de Guérande</p>
+                            <p class="prix">18€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Baba au rhum revisité</h3>
+                            <p class="text">Avec son coulis de citron</p>
+                            <p class="prix">22€</p>
+                        </li>
+                        <li class="card -shadow">
+                            <h3>Tarte au citron meringuée </h3>
+                            <p class="text">Déstructurée</p>
+                            <p class="prix">23€</p>
+                        </li>
+                    </ul>
+                </section>
 
-        <section id="plats">
-            <h2>PLATS</h2>
-            <ul>
-                <li>
-                    <h3>Noix de coquilles Saint-Jacques</h3>
-                    <p class="text">Sur lit de purée de céleri-rave</p>
-                    <p class="prix">40€</p>
-                </li>
-                <li>
-                    <h3>Langoustine poêlée</h3>
-                    <p class="text">Purée de patate douce</p>
-                    <p class="prix">35€</p>
-                </li>
-                <li>
-                    <h3>Mijoté de queue de boeuf</h3>
-                    <p class="text">Et riz sauvage aux zestes de citron</p>
-                    <p class="prix">44€</p>
-                </li>
-            </ul>
-        </section>
-    <!-- ____________DESSERTS______________ -->
+                <!-- ____________COMMANDER______________ -->
 
-        <section id="desserts">
-            <h2>DESSERTS</h2>
-            <ul>
-                <li>
-                    <h3>Macaron noisette et chocolat</h3>
-                    <p class="text">Glace au caramel brun et sel de Guérande</p>
-                    <p class="prix">18€</p>
-                </li>
-                <li>
-                    <h3>Baba au rhum revisité</h3>
-                    <p class="text">Avec son coulis de citron</p>
-                    <p class="prix">22€</p>
-                </li>
-                <li>
-                    <h3>Tarte au citron meringuée </h3>
-                    <p class="text">Déstructurée</p>
-                    <p class="prix">23€</p>
-                </li>
-            </ul>
-        </section>
+                <a href="" class="commander card -shadow">Commander</a>
+        </div><!-- fin container -->
 
-    <!-- ____________COMMANDER______________ -->
+    </main>
 
-    <a href="" class="commander">Commander</a>
-
-    </div><!-- fin-Container -->
 
     <footer>
 
         <a href="index.html" class="logo">ohmyfood</a>
         <a href="#"><i class="fas fa-utensils"></i><strong> Proposer un restaurant </strong></a>
         <a href="#"><i class="fas fa-hands-helping"></i><strong>Devenir partenaire</strong></a>
-        <a href="#">Mentions légales</p>
+        <a href="#">Mentions légales</a>
         <a href="#">Contact</a>
 
     </footer>

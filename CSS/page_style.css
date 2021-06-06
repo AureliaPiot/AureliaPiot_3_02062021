@@ -1,0 +1,33 @@
+.fond{
+    width: 100%;
+    height: 70vw;
+    max-height: 400px;
+    object-fit: cover;
+}
+.container{
+    position: relative;
+    margin-top: -40px;
+    padding: 20px 15px;
+    border-radius: 25px 25px 0 0;
+    background-color: #F6F6F6;
+}
+h1{
+    font-family: 'Shrikhand', cursive;
+}
+h2::after{
+content: "";
+display: block;
+width: 40px;
+border-bottom: 3px solid #99e2d0;
+}
+li{
+    width:95%;
+    margin: 0 auto;
+    background-color: white;
+
+}
+.commander{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}

@@ -1,6 +1,11 @@
 *{
     margin: 0;
 }
+header{
+    box-shadow: 10px 10px 10px #0000001f;
+    padding: 1.3rem 0 0.8rem 0;
+}
+
 a{
     display:block ;
     color: black;
@@ -14,20 +19,18 @@ body {
     margin: 0;
 }
 
-header{
-    box-shadow: 10px 10px 10px #0000001f;
-    padding: 1.3rem 0 0.8rem 0;
-
-}
 header img{
     width: 45%;
     margin: 0 auto;
 }
 .locate{
     background-color: #EAEAEA;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
     padding: 0.9rem;
+}
+.locate i{
+    margin-right: 10px;
 }
 #reservation{
     background-color: #F6F6F6;
@@ -62,26 +65,59 @@ ul{
 }
 .card{
     border-radius:25px;
-
 }
-#fontionnement li{
-    width: 80%;
+.-shadow{
+    box-shadow: 10px 10px 10px #0000001f;
+}
+#fonctionnement {
+    padding: 40px 20px;
+}
+#fonctionnement h2{
+    padding-bottom: 10px ;
+}
+#fonctionnement li{
+    font-size: 15px;
+    width: 85%;
     /* max-width: 400px; */
-    margin: 0 auto;
-    background-color: grey;
-    padding: 25px;
+    margin: 15px auto;
+    background-color: #F6F6F6;
+    padding: 20px;
 }
-#fontionnement .nbr-fonctionnement{
+
+.fonct-card{
+    display: flex;
+}
+
+.fonct-card::before{
     display: block;
-    border-radius: 25px;
-    color: white;
-    background-color: #9356DC;
-    width: 15px;
-    height: 15px;
-    font-size: 1.4rem;
+    width: 25px;
+    height: 20px;
+    margin-left: -30px;
+    padding-top: 5px;
+    font-size: 13px;
     font-weight: 300;
     text-align: center;
+    justify-self: initial;
+    border-radius: 50%;
+    color: white;
+    background-color: #9356DC;
 }
+
+.c-1::before{
+    content: "1";
+}
+.c-2::before{
+    content: "2";
+}
+.c-3::before{
+    content: "3";
+}
+#fonctionnement .fas{
+    font-size: 20px;
+    color:#7E7E7E;
+    margin: 5px 20px;
+}
+
 
 #restaurants{
     background-color: #F6F6F6;
@@ -92,10 +128,7 @@ ul{
     max-width: 700px;
     margin: 10px auto;
 }
-#restaurants .card{
-    /* border-radius:25px; */
-    box-shadow: 10px 10px 10px #0000001f;
-}
+
 #restaurants img{
     width: 100%;
     height: 45vw;
@@ -131,15 +164,23 @@ ul{
 
 }
 
-
-
 footer{
+    padding: 20px;
     background-color: #353535;
 }
 footer .logo{
-    width: 7rem;
+    font-size: 1.2rem;
     font-family: 'Shrikhand', cursive;
+    margin-bottom: 15px; 
+    
 }
 footer a{
+    font-weight: 300;
     color: white;
+    margin: 8px 0;
 }
+footer strong{
+    font-weight: 400;
+    margin-left: 10px;
+}
+
