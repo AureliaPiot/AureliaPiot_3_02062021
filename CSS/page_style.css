@@ -8,11 +8,12 @@
     position: relative;
     margin-top: -40px;
     padding: 20px 15px;
-    border-radius: 25px 25px 0 0;
+    border-radius: 35px 35px 0 0;
     background-color: #F6F6F6;
 }
 h1{
     font-family: 'Shrikhand', cursive;
+    font-weight: 400;
 }
 h2::after{
 content: "";
@@ -21,11 +22,69 @@ width: 40px;
 border-bottom: 3px solid #99e2d0;
 }
 li{
+    display: grid;
+    grid-template-columns:4fr 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px 0;
     width:95%;
-    margin: 0 auto;
+    margin: 10px auto;
+    padding-left: 10px;
     background-color: white;
+    overflow: hidden;
+}
+li:hover{
+    transition: all 400ms ease-in-out;
+}
+li h3{
+    grid-column: 1/span 2 ;
+    grid-row: 1;
+    margin-top: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+li .text{
+    grid-column: 1 ;
+    grid-row: 2 ;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
 }
+li .prix{
+    grid-column:2 ;
+    grid-row: 2;
+    text-align: center;
+}
+li .icon{
+    grid-column: 3 ;
+    grid-row: 1/span 2;
+    width: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    color: white;
+
+   
+}
+li:hover .icon{
+    width: 4rem;
+    transition: all 400ms ease-in-out;
+}
+li .icon i{
+    transform: rotate(100deg);
+    }
+li:hover .icon i{
+transform: rotate(0deg);
+transition: all 400ms ease-in-out;
+
+}
+
 .commander{
     width: 50%;
     margin: 0 auto;
