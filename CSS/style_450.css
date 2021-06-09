@@ -1,3 +1,5 @@
+/* ajouter des max-width */
+
 *{
     margin: 0;
 }
@@ -78,7 +80,6 @@ ul{
 #fonctionnement li{
     font-size: 15px;
     width: 85%;
-    /* max-width: 400px; */
     margin: 15px auto;
     background-color: #F6F6F6;
     padding: 20px;
