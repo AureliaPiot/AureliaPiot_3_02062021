@@ -3,10 +3,6 @@
 *{
     margin: 0;
 }
-header{
-    box-shadow: 10px 10px 10px #0000001f;
-    padding: 1.3rem 0 0.8rem 0;
-}
 
 a{
     display:block ;
@@ -21,6 +17,10 @@ body {
     margin: 0;
 }
 
+header{
+    box-shadow: 10px 10px 10px #0000001f;
+    padding: 1.3rem 0 0.8rem 0;
+}
 header img{
     width: 45%;
     margin: 0 auto;
