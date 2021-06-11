@@ -40,6 +40,30 @@ ul {
   box-shadow: 3px 5px 15px #0000001f;
 }
 
+.loadingScreen {
+  position: fixed;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  padding: 50% 0;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: #FF79DA;
+  animation: 3s cubic-bezier(0.33, 0.1, 0.5, 1) Loading;
+}
+
+@keyframes Loading {
+  from {
+    opacity: 100%;
+    background: white;
+  }
+  to {
+    opacity: 0%;
+    background: transparent;
+    display: none;
+  }
+}
 header {
   box-shadow: 10px 10px 10px #0000001f;
   padding: 1.3rem 0 0.8rem 0;
@@ -47,6 +71,7 @@ header {
 header img {
   width: 45%;
   margin: 0 auto;
+  max-width: 300px;
 }
 
 .locate {
@@ -133,14 +158,31 @@ header img {
 }
 #restaurants ul li {
   width: 90%;
-  max-width: 700px;
   margin: 10px auto;
+  position: relative;
+  max-width: 500px;
+  max-height: 400px;
+}
+#restaurants ul li:nth-child(1)::after, #restaurants ul li:nth-child(2)::after {
+  content: "Nouveau";
+  display: inline;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #008766;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  box-shadow: 4px 4px 4px #0000001f;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 #restaurants img {
   width: 100%;
   height: 45vw;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
+  object-position: 0 -35px;
 }
 #restaurants .card-txt {
   display: grid;
