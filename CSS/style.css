@@ -1,6 +1,7 @@
 /*
 faire les variable pour les couleurs
 */
+/* ____________general_______________*/
 * {
   margin: 0;
 }
@@ -13,6 +14,10 @@ a {
 
 img {
   display: block;
+}
+
+.-Y35 {
+  object-position: 0 -35px;
 }
 
 body {
@@ -40,30 +45,36 @@ ul {
   box-shadow: 3px 5px 15px #0000001f;
 }
 
+/* ____________LOAD_______________*/
 .loadingScreen {
-  position: fixed;
-  z-index: 20;
+  padding: 50px 0;
   height: 100%;
   width: 100%;
-  padding: 50% 0;
+  position: fixed;
+  z-index: 10;
   font-family: "Shrikhand", cursive;
   text-align: center;
   font-size: 3rem;
   color: #FF79DA;
-  animation: 3s cubic-bezier(0.33, 0.1, 0.5, 1) Loading;
+  animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  -webkit-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  -moz-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  -o-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
 }
 
-@keyframes Loading {
+@keyframes loading {
   from {
-    opacity: 100%;
     background: white;
+    opacity: 1;
+    visibility: visible;
   }
   to {
-    opacity: 0%;
     background: transparent;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }
+/* ____________Header_______________ */
 header {
   box-shadow: 10px 10px 10px #0000001f;
   padding: 1.3rem 0 0.8rem 0;
@@ -74,6 +85,7 @@ header img {
   max-width: 300px;
 }
 
+/* ____________localisation_______________ */
 .locate {
   background-color: #EAEAEA;
   font-weight: 400;
@@ -84,6 +96,7 @@ header img {
   margin-right: 10px;
 }
 
+/* ____________Reservation_______________*/
 #reservation {
   background-color: #F6F6F6;
   text-align: center;
@@ -107,6 +120,7 @@ header img {
   box-shadow: 10px 10px 10px #0000001f;
 }
 
+/* ____________Fonctionnement_______________*/
 #fonctionnement {
   padding: 40px 20px;
 }
@@ -119,6 +133,7 @@ header img {
   margin: 15px auto;
   background-color: #F6F6F6;
   padding: 20px;
+  max-width: 400px;
 }
 #fonctionnement .fas {
   font-size: 20px;
@@ -152,16 +167,16 @@ header img {
   background-color: #9356DC;
 }
 
+/* ____________Restaurant_______________*/
 #restaurants {
   background-color: #F6F6F6;
   padding: 3.3rem 0.5rem;
+  /***********************************************************/
 }
 #restaurants ul li {
   width: 90%;
   margin: 10px auto;
   position: relative;
-  max-width: 500px;
-  max-height: 400px;
 }
 #restaurants ul li:nth-child(1)::after, #restaurants ul li:nth-child(2)::after {
   content: "Nouveau";
@@ -182,7 +197,6 @@ header img {
   height: 45vw;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
-  object-position: 0 -35px;
 }
 #restaurants .card-txt {
   display: grid;
@@ -204,13 +218,29 @@ header img {
   align-self: center;
   justify-self: center;
 }
-#restaurants i:hover, #restaurants #restaurants i:active {
-  font-weight: 800;
-  /* color: linear-gradient( $color-primaire, $color-secondaire); */
+
+.-empty {
+  transition: 0.25s;
+  color: black;
+}
+.-empty:hover {
   color: #9356DC;
-  background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
+  display: none;
 }
 
+.-full {
+  font-weight: 900;
+  color: transparent;
+}
+.-full:hover {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
+  transition: 1s;
+}
+
+/***********************************************************/
+/*____________Footer_______________*/
 footer {
   padding: 20px;
   background-color: #353535;

@@ -12,37 +12,37 @@
     <!-- ________________Font___________________ -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Font-Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <!-- Font-Shrikhand -->
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
-
-    <!-- mettre le header-footer dans le meme css(tout seul) -->
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
     <title>projet3</title>
 </head>
 
 <body>
-    <div class="loadingScreen">
+    <!-- <div class="loadingScreen">
         Ohmyfood
-    </div>
-    <!-- en plein ecran ,fixer-->
+    </div> -->
+    <!-- en plein ecran ,fixer A DE-COMMENTER-->
     <!-- _____________HEADER-logo_____________ -->
     <header>
         <img src="images/logo/ohmyfood.png" alt="ohmyfood">
     </header>
-    <!-- _____________LOCALISATION_____________ -->
-    <div class="locate">
-        <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-    </div>
-    <!-- _____________RESERVATION_____________ -->
-    <section id="reservation">
-
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a class="resevation-btn card-rond" href="#restaurants">Explorer nos restaurants</a>
-
-    </section>
     <main>
+        <!-- _____________LOCALISATION_____________ -->
+        <div class="locate">
+            <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+        </div>
+        <!-- _____________RESERVATION_____________ -->
+        <section id="reservation">
+
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <a class="resevation-btn card-rond" href="#restaurants">Explorer nos restaurants</a>
+
+        </section>
+
         <!-- _____________FONCTIONNEMENT_____________ -->
         <section id="fonctionnement">
             <h2>Fonctionnement</h2>
@@ -54,7 +54,7 @@
                     <p><i class="fas fa-list-ul"></i>Composez votre menu</p>
                 </li>
                 <li class="fonct-card card -shadow c-3">
-                    <p><i class="fas fa-store"></i>Dégustez au restaurant</p>                
+                    <p><i class="fas fa-store"></i>Dégustez au restaurant</p>
                 </li>
 
             </ul>
@@ -64,13 +64,19 @@
             <h2>Restaurants</h2>
             <ul class="list-restaurants">
 
-                <li >
+                <li>
                     <a class="card -shadow" href="la_palette_du_gout.html">
                         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                         <div class="card-txt">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
-                            <i class="far fa-heart"></i>
+                            
+                            <i class="-full fas fa-heart "></i>
+                            <i class="-empty far fa-heart "></i>
+
+                       
+                        
+                            <!-- <i class="fas fa-heart"></i> -->
                         </div>
                     </a>
                 </li>
@@ -80,8 +86,9 @@
                         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                         <div class="card-txt">
                             <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                            <i class="far fa-heart"></i>
+                            <p>Charonne</p> 
+                            <i class="-full fas fa-heart "></i>
+                            <i class="far fa-heart -empty"></i>
                         </div>
                     </a>
                 </li>
@@ -92,18 +99,21 @@
                         <div class="card-txt">
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
-                            <i class="far fa-heart"></i>
+                            <i class="-full fas fa-heart "></i>
+                            <i class="far fa-heart -empty"></i>
                         </div>
                     </a>
                 </li>
 
                 <li>
                     <a class="card -shadow" href="le_delice_des_sens.html">
-                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="Le délice des sens">
                         <div class="card-txt">
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
-                            <i class="far fa-heart"></i>
+                            <i class="-full fas fa-heart "></i>
+                            <i class="far fa-heart -empty"></i>
                         </div>
                     </a>
                 </li>
@@ -123,6 +133,7 @@
         <a href="#">Contact</a>
 
     </footer>
+
 
 </body>
 
