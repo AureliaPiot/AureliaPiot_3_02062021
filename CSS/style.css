@@ -2,16 +2,6 @@
 faire les variable pour les couleurs
 */
 /****************************MEDIA DESKTOP*******************************/
-@media screen and (min-width: 992px) {
-  main {
-    width: 90%;
-    margin: auto;
-  }
-
-  #fonctionnement li {
-    width: 25%;
-  }
-}
 /****************************MEDIA DESKTOP*******************************/
 /* ____________general_______________*/
 * {
@@ -88,6 +78,7 @@ ul {
 }
 /* ____________Header_______________ */
 header {
+  box-shadow: 10px 10px 10px #0000001f;
   padding: 1.3rem 0 0.8rem 0;
 }
 header img {
