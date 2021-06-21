@@ -166,6 +166,17 @@ header img {
   color: white;
   background-color: #9356DC;
 }
+#fonctionnement .fonct-card:hover {
+  transform: scale(98%);
+  background-color: #fbfbfb;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1215686275);
+  transition: 0.2s ease-in-out;
+  cursor: default;
+}
+#fonctionnement .fonct-card:hover::before {
+  background-color: #ae80e5;
+}
+
 /* ____________Restaurant_______________*/
 #restaurants {
   background-color: #F6F6F6;
@@ -252,7 +263,6 @@ header img {
   position: absolute;
   top: 0px;
   right: -5px;
-  background: grey;
   background: white;
   border-radius: 15px 15px 20px 15px;
   transition: 2.5s;
