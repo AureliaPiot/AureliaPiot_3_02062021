@@ -94,10 +94,15 @@ header a {
   position: relative;
 }
 header a i {
-  font-size: 1.4rem;
+  font-size: 4.4rem;
   align-self: center;
   margin-left: 5%;
   position: absolute;
+}
+@media screen and (max-width: 576px) {
+  header a i {
+    font-size: 1.4rem;
+  }
 }
 header img {
   width: 45%;
@@ -106,7 +111,6 @@ header img {
 }
 
 footer {
-  padding: 20px;
   background-color: #353535;
   display: flex;
   align-items: center;
@@ -114,7 +118,7 @@ footer {
 footer .logo {
   font-size: 2.2rem;
   font-family: "Shrikhand", cursive;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 footer a {
   font-weight: 300;
@@ -131,6 +135,7 @@ footer strong {
 @media screen and (max-width: 576px) {
   footer {
     display: block;
+    padding: 20px;
   }
   footer .logo {
     font-size: 1.2rem;
@@ -146,6 +151,12 @@ footer strong {
   height: 70vw;
   max-height: 400px;
   object-fit: cover;
+  border-radius: 100px 100px 0 0;
+}
+@media screen and (max-width: 576px) {
+  .fond {
+    border-radius: 0;
+  }
 }
 
 .container {
@@ -156,8 +167,17 @@ footer strong {
   background-color: #EAEAEA;
 }
 
-section {
-  margin: 20px 0;
+.section_plat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  column-gap: 50px;
+}
+@media screen and (max-width: 576px) {
+  .section_plat {
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+  }
 }
 
 h1 {
@@ -190,6 +210,7 @@ li {
   padding-left: 10px;
   background-color: white;
   overflow: hidden;
+  animation: crad-plat 1s cubic-bezier(1, 0.01, 0.7, 1) forwards;
 }
 li:hover {
   transition: all 400ms ease-in-out;
@@ -201,6 +222,16 @@ li:hover .icon {
 li:hover .icon i {
   transform: rotate(0deg);
   transition: all 400ms ease-in-out;
+}
+@keyframes crad-plat {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 li h3 {
   grid-column: 1/span 2;
@@ -300,12 +331,17 @@ li .icon i {
 }
 
 .commander {
-  width: 50%;
+  width: 30%;
   text-align: center;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 15px 0;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
+}
+@media screen and (max-width: 576px) {
+  .commander {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=Style_page.css.map */
