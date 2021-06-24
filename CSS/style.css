@@ -58,19 +58,22 @@ ul {
 }
 
 .loadingScreen {
-  padding: 50px 0;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 10;
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-size: 3rem;
+  font-size: 8vw;
   color: #FF79DA;
-  animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-  -webkit-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-  -moz-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-  -o-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  animation: loading 2.3s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+}
+.loadingScreen p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform-origin: left;
+  transform: translate(-50%, 0);
 }
 
 @keyframes loading {
