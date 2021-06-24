@@ -44,7 +44,7 @@ ul {
 }
 .card:hover {
   transform: scale(99.5%);
-  background-color: #fbfbfb;
+  background-color: #efefef;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1215686275);
   transition: 0.2s ease-in-out;
 }
@@ -94,10 +94,15 @@ header a {
   position: relative;
 }
 header a i {
-  font-size: 1.4rem;
+  font-size: 4.4rem;
   align-self: center;
   margin-left: 5%;
   position: absolute;
+}
+@media screen and (max-width: 576px) {
+  header a i {
+    font-size: 1.4rem;
+  }
 }
 header img {
   width: 45%;
@@ -106,7 +111,6 @@ header img {
 }
 
 footer {
-  padding: 20px;
   background-color: #353535;
   display: flex;
   align-items: center;
@@ -114,7 +118,7 @@ footer {
 footer .logo {
   font-size: 2.2rem;
   font-family: "Shrikhand", cursive;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 footer a {
   font-weight: 300;
@@ -131,6 +135,7 @@ footer strong {
 @media screen and (max-width: 576px) {
   footer {
     display: block;
+    padding: 20px;
   }
   footer .logo {
     font-size: 1.2rem;
@@ -142,7 +147,7 @@ footer strong {
 }
 
 .locate {
-  background-color: #F6F6F6;
+  background-color: #EAEAEA;
   font-weight: 400;
   text-align: center;
   padding: 0.9rem;
@@ -162,7 +167,7 @@ footer strong {
   font-size: 15px;
   width: 20%;
   margin: 15px auto;
-  background-color: #F6F6F6;
+  background-color: #EAEAEA;
   padding: 20px;
 }
 #fonctionnement .fas {
@@ -207,7 +212,7 @@ footer strong {
 }
 
 #reservation {
-  background-color: #F6F6F6;
+  background-color: #EAEAEA;
   text-align: center;
   padding: 1.9rem 0;
 }
@@ -235,7 +240,7 @@ footer strong {
 }
 
 #restaurants {
-  background-color: #F6F6F6;
+  background-color: #EAEAEA;
   padding: 1.5rem 1.5rem 5rem;
 }
 #restaurants h2 {
@@ -317,7 +322,7 @@ footer strong {
   position: absolute;
   top: 0px;
   right: -5px;
-  background: #F6F6F6;
+  background: #EAEAEA;
   border-radius: 15px 15px 20px 15px;
   transition: 2.5s;
 }
