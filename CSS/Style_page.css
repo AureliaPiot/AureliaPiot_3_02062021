@@ -44,7 +44,7 @@ ul {
 }
 .card:hover {
   transform: scale(99.5%);
-  background-color: #efefef;
+  background-color: #fbfbfb;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1215686275);
   transition: 0.2s ease-in-out;
 }
@@ -212,6 +212,32 @@ h2::after {
   opacity: 0;
   animation: card-plat 1s cubic-bezier(0.5, 0, 1, 1) forwards;
 }
+@keyframes card-plat {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.section_plat section li:nth-child(1n) {
+  transition-delay: 200ms;
+  animation-delay: 200ms;
+}
+.section_plat section li:nth-child(2n) {
+  transition-delay: 400ms;
+  animation-delay: 400ms;
+}
+.section_plat section li:nth-child(3n) {
+  transition-delay: 600ms;
+  animation-delay: 600ms;
+}
+.section_plat section li:nth-child(4n) {
+  transition-delay: 800ms;
+  animation-delay: 800ms;
+}
 .section_plat section li:hover {
   transition: all 400ms ease-in-out;
 }
@@ -261,32 +287,6 @@ h2::after {
 }
 .section_plat section li .icon i {
   transform: rotate(100deg);
-}
-@keyframes card-plat {
-  0% {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-.section_plat section li:nth-child(1n) {
-  transition-delay: 200ms;
-  animation-delay: 200ms;
-}
-.section_plat section li:nth-child(2n) {
-  transition-delay: 400ms;
-  animation-delay: 400ms;
-}
-.section_plat section li:nth-child(3n) {
-  transition-delay: 600ms;
-  animation-delay: 600ms;
-}
-.section_plat section li:nth-child(4n) {
-  transition-delay: 800ms;
-  animation-delay: 800ms;
 }
 
 .titre {

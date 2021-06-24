@@ -44,7 +44,7 @@ ul {
 }
 .card:hover {
   transform: scale(99.5%);
-  background-color: #efefef;
+  background-color: #fbfbfb;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1215686275);
   transition: 0.2s ease-in-out;
 }
@@ -167,7 +167,7 @@ footer strong {
   font-size: 15px;
   width: 20%;
   margin: 15px auto;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   padding: 20px;
 }
 #fonctionnement .fas {
@@ -202,8 +202,11 @@ footer strong {
   color: white;
   background-color: #9356DC;
 }
-#fonctionnement .fonct-card:hover::before {
-  background-color: #ae80e5;
+#fonctionnement .fonct-card:hover {
+  background-color: #f2eafb;
+}
+#fonctionnement .fonct-card:hover .fas {
+  color: #9356DC;
 }
 @media screen and (max-width: 576px) {
   #fonctionnement li {
@@ -212,7 +215,7 @@ footer strong {
 }
 
 #reservation {
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   text-align: center;
   padding: 1.9rem 0;
 }
@@ -240,17 +243,21 @@ footer strong {
 }
 
 #restaurants {
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   padding: 1.5rem 1.5rem 5rem;
 }
 #restaurants h2 {
   margin-bottom: 0.8rem;
 }
 #restaurants ul li {
-  width: 20%;
-  height: 25vw;
-  margin: 10px auto;
+  width: 40%;
+  margin: 20px auto;
   position: relative;
+}
+@media screen and (max-width: 576px) {
+  #restaurants ul li {
+    margin: 10px auto;
+  }
 }
 #restaurants ul li:nth-child(1)::after, #restaurants ul li:nth-child(2)::after {
   content: "Nouveau";
@@ -268,9 +275,14 @@ footer strong {
 }
 #restaurants img {
   width: 100%;
-  height: 23vw;
+  height: 10vw;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  #restaurants img {
+    height: 45vw;
+  }
 }
 #restaurants .card-txt {
   display: grid;
@@ -331,6 +343,9 @@ footer strong {
 }
 #restaurants .icone:hover .-full::after {
   transform: translateY(-101%) rotate(360deg);
+}
+#restaurants .icone .-full::after {
+  background: white;
 }
 @media screen and (max-width: 576px) {
   #restaurants {
