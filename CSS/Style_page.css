@@ -167,19 +167,6 @@ footer strong {
   background-color: #EAEAEA;
 }
 
-.section_plat {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-evenly;
-  column-gap: 50px;
-}
-@media screen and (max-width: 576px) {
-  .section_plat {
-    grid-template-columns: 1fr;
-    column-gap: 20px;
-  }
-}
-
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
@@ -200,7 +187,19 @@ h2::after {
   border-bottom: 3px solid #99E2D0;
 }
 
-li {
+.section_plat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  column-gap: 50px;
+}
+@media screen and (max-width: 576px) {
+  .section_plat {
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+  }
+}
+.section_plat section li {
   display: grid;
   grid-template-columns: 1fr 55px auto;
   grid-template-rows: 1fr 1fr;
@@ -210,30 +209,21 @@ li {
   padding-left: 10px;
   background-color: white;
   overflow: hidden;
-  animation: crad-plat 2s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  opacity: 0;
+  animation: card-plat 1s cubic-bezier(0.5, 0, 1, 1) forwards;
 }
-li:hover {
+.section_plat section li:hover {
   transition: all 400ms ease-in-out;
 }
-li:hover .icon {
+.section_plat section li:hover .icon {
   width: 4rem;
   transition: all 400ms ease-in-out;
 }
-li:hover .icon i {
+.section_plat section li:hover .icon i {
   transform: rotate(0deg);
   transition: all 400ms ease-in-out;
 }
-@keyframes crad-plat {
-  0% {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-li h3 {
+.section_plat section li h3 {
   grid-column: 1/span 2;
   grid-row: 1;
   margin-top: 10px;
@@ -242,7 +232,7 @@ li h3 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-li .text {
+.section_plat section li .text {
   grid-column: 1;
   grid-row: 2;
   margin-bottom: 10px;
@@ -252,13 +242,13 @@ li .text {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-li .prix {
+.section_plat section li .prix {
   grid-column: 2;
   grid-row: 2;
   font-weight: 500;
   margin-left: 5px;
 }
-li .icon {
+.section_plat section li .icon {
   grid-column: 3;
   grid-row: 1/span 2;
   width: 0;
@@ -269,8 +259,34 @@ li .icon {
   background-color: #99E2D0;
   color: white;
 }
-li .icon i {
+.section_plat section li .icon i {
   transform: rotate(100deg);
+}
+@keyframes card-plat {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.section_plat section li:nth-child(1n) {
+  transition-delay: 200ms;
+  animation-delay: 200ms;
+}
+.section_plat section li:nth-child(2n) {
+  transition-delay: 400ms;
+  animation-delay: 400ms;
+}
+.section_plat section li:nth-child(3n) {
+  transition-delay: 600ms;
+  animation-delay: 600ms;
+}
+.section_plat section li:nth-child(4n) {
+  transition-delay: 800ms;
+  animation-delay: 800ms;
 }
 
 .titre {
