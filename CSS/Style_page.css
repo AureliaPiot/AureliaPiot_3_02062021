@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  cursor: default;
 }
 
 a {
@@ -58,19 +59,22 @@ ul {
 }
 
 .loadingScreen {
-  padding: 50px 0;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 10;
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-size: 3rem;
+  font-size: 8vw;
   color: #FF79DA;
-  animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-  -webkit-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-  -moz-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-  -o-animation: loading 6s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  animation: loading 2.3s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+}
+.loadingScreen p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform-origin: left;
+  transform: translate(-50%, 0);
 }
 
 @keyframes loading {
@@ -94,7 +98,7 @@ header a {
   position: relative;
 }
 header a i {
-  font-size: 4.4rem;
+  font-size: 4vw;
   align-self: center;
   margin-left: 5%;
   position: absolute;
@@ -107,16 +111,17 @@ header a i {
 header img {
   width: 45%;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 footer {
   background-color: #353535;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
 footer .logo {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-family: "Shrikhand", cursive;
   margin: 10px 0;
 }
@@ -126,13 +131,12 @@ footer a {
   margin: 8px 0;
   font-size: 1.2rem;
   text-align: center;
-  width: 40%;
 }
 footer strong {
   font-weight: 400;
   margin-left: 10px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   footer {
     display: block;
     padding: 20px;
@@ -148,13 +152,15 @@ footer strong {
 
 .fond {
   width: 100%;
-  height: 70vw;
+  height: 730px;
   max-height: 400px;
   object-fit: cover;
+  object-position: 0 55%;
   border-radius: 100px 100px 0 0;
 }
 @media screen and (max-width: 576px) {
   .fond {
+    height: 70vw;
     border-radius: 0;
   }
 }
@@ -193,11 +199,21 @@ h2::after {
   justify-content: space-evenly;
   column-gap: 50px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1250px) {
   .section_plat {
+    width: 70%;
+    margin: auto;
     grid-template-columns: 1fr;
     column-gap: 20px;
   }
+}
+@media screen and (max-width: 576px) {
+  .section_plat {
+    width: 100%;
+  }
+}
+.section_plat section {
+  min-width: 330px;
 }
 .section_plat section li {
   display: grid;
@@ -243,11 +259,11 @@ h2::after {
 }
 .section_plat section li:hover .icon {
   width: 4rem;
-  transition: all 400ms ease-in-out;
+  transition: all 700ms ease-in-out;
 }
 .section_plat section li:hover .icon i {
   transform: rotate(0deg);
-  transition: all 400ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 .section_plat section li h3 {
   grid-column: 1/span 2;
@@ -293,6 +309,17 @@ h2::after {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+}
+@media screen and (max-width: 1250px) {
+  .titre {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .titre {
+    width: 100%;
+  }
 }
 .titre .icone {
   margin-right: 25px;
