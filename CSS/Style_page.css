@@ -40,25 +40,29 @@ ul {
   padding: 0;
 }
 
-.card {
-  border-radius: 15px;
+.-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
-.card:hover {
-  transform: scale(99.5%);
-  background-color: #fbfbfb;
-  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1215686275);
+.-shadow:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.btn-colored {
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+.btn-colored:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
   transition: 0.2s ease-in-out;
 }
 
-.card-rond {
-  border-radius: 25px;
-}
-
-.-shadow {
-  box-shadow: 3px 5px 15px #0000001f;
+.card {
+  border-radius: 15px;
+  transition: 0.2s ease-in-out;
 }
 
 .loadingScreen {
+  display: flex;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -67,14 +71,12 @@ ul {
   text-align: center;
   font-size: 8vw;
   color: #FF79DA;
-  animation: loading 2.3s cubic-bezier(1, 0.01, 0.7, 1) forwards;
+  justify-content: center;
+  animation: loading 2.5s cubic-bezier(1, 0.01, 0.7, 1) forwards;
 }
 .loadingScreen p {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform-origin: left;
-  transform: translate(-50%, 0);
+  top: 14vw;
 }
 
 @keyframes loading {
@@ -89,6 +91,35 @@ ul {
     visibility: hidden;
   }
 }
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 25vw;
+  transform: translate(-17%, 0);
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: #9356DC transparent #9356DC transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   padding: 1.3rem 0 0.8rem 0;
 }
@@ -98,7 +129,7 @@ header a {
   position: relative;
 }
 header a i {
-  font-size: 4vw;
+  font-size: 2.5rem;
   align-self: center;
   margin-left: 5%;
   position: absolute;
@@ -131,6 +162,9 @@ footer a {
   margin: 8px 0;
   font-size: 1.2rem;
   text-align: center;
+}
+footer a:hover {
+  color: #ffc6ef;
 }
 footer strong {
   font-weight: 400;
@@ -239,19 +273,15 @@ h2::after {
   }
 }
 .section_plat section li:nth-child(1n) {
-  transition-delay: 200ms;
   animation-delay: 200ms;
 }
 .section_plat section li:nth-child(2n) {
-  transition-delay: 400ms;
   animation-delay: 400ms;
 }
 .section_plat section li:nth-child(3n) {
-  transition-delay: 600ms;
   animation-delay: 600ms;
 }
 .section_plat section li:nth-child(4n) {
-  transition-delay: 800ms;
   animation-delay: 800ms;
 }
 .section_plat section li:hover {
@@ -379,7 +409,6 @@ h2::after {
   margin: 40px auto;
   padding: 15px 0;
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
 }
 @media screen and (max-width: 576px) {
   .commander {
