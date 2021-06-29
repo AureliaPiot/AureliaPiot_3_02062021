@@ -1,0 +1,72 @@
+#fonctionnement {
+    padding: 40px 20px;
+
+    h2{
+        padding-bottom: 10px ;
+    }
+
+    li{
+        font-size: 15px;
+        width: 20%;
+        min-width: 250px;
+        margin: 15px auto;
+        background-color: $color-fond_1;
+        padding: 20px 0 20px 20px;
+    }
+    .fas{
+        font-size: 20px;
+        color:#7E7E7E;
+        margin: 5px 20px;
+    }
+    .c-1::before{
+        content: "1";
+    }
+    .c-2::before{
+        content: "2";
+    }
+    .c-3::before{
+        content: "3";
+    }
+
+    .fonct-card{
+        display: flex;
+        cursor: default;
+        &::before{
+            display: block;
+            width: 25px;
+            height: 20px;
+            margin-left: -30px;
+            padding-top: 5px;
+            font-size: 13px;
+            font-weight: 300;
+            text-align: center;
+            justify-self: initial;
+            border-radius: 50%;
+            color: white;
+            background-color: $color-primaire;
+        }
+        &:hover{
+      
+            background-color:lighten($color-primaire, 35%);
+            .fas{
+                color:$color-primaire;
+            }
+        
+        }
+    }
+    @include laptop{
+        li{
+            width: 65%;
+            // margin: auto;
+
+        }
+    }
+
+    
+    @include mobile{
+        li{
+            width: 85%;
+        }
+    }
+
+}

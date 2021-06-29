@@ -61,65 +61,6 @@ ul {
   transition: 0.2s ease-in-out;
 }
 
-.loadingScreen {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 10;
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  font-size: 8vw;
-  color: #FF79DA;
-  justify-content: center;
-  animation: loading 2.5s cubic-bezier(1, 0.01, 0.7, 1) forwards;
-}
-.loadingScreen p {
-  position: absolute;
-  top: 14vw;
-}
-
-@keyframes loading {
-  from {
-    background: white;
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    background: transparent;
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-.lds-dual-ring {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 25vw;
-  transform: translate(-17%, 0);
-}
-
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid black;
-  border-color: #9356DC transparent #9356DC transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
-}
-
-@keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 header {
   padding: 1.3rem 0 0.8rem 0;
 }

@@ -1,0 +1,77 @@
+
+
+header{
+    padding: 1.3rem 0 0.8rem 0;
+
+    a{
+        display: flex;
+        align-items: center;
+        position:relative;
+
+        
+        i{
+
+            font-size: 2.5rem;
+            align-self: center;
+            margin-left: 5%;
+            position: absolute;
+            @include mobile{    
+                font-size: 1.4rem;
+
+            }
+        }
+    }
+    img{
+        width: 45%;
+        margin: 0 auto;
+        max-width: 200px;
+    }
+}
+
+footer{
+    background-color: #353535;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .logo{
+        font-size: 1.6rem;
+        font-family: 'Shrikhand', cursive;
+        margin: 10px 0;
+        
+    }
+
+    a{
+        font-weight: 300;
+        color: white;
+        margin: 8px 0;
+
+        font-size: 1.2rem;
+        text-align: center;
+        &:hover{
+            color:lighten($color-secondaire,15%);
+        }
+    }
+
+    strong{
+        font-weight: 400;
+        margin-left: 10px;
+    }
+
+    @include laptop{
+
+        display: block;
+        padding: 20px;
+
+        .logo{
+            font-size: 1.2rem;
+        }
+        a{
+            text-align: start;
+            width: auto;
+        }
+
+    }
+    
+}

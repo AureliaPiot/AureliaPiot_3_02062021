@@ -1,0 +1,138 @@
+$color-primaire : #9356DC ;
+$color-secondaire : #FF79DA ;
+$color-tertiaire : #99E2D0;
+
+$color-fond_1 : #F6F6F6;
+$color-fond_2 : #EAEAEA;
+
+$breakpoint-inter_media:1250px;
+$breakpoint-laptop: 992px;
+$breakpoint-mobile: 576px;
+
+
+///////////////////LIST PLAT
+
+@mixin plat_delay{
+
+    animation: card-plat 1s cubic-bezier(.50,-0.00,1,1)   forwards;
+
+    @keyframes card-plat {
+        0%   { opacity: 0;
+                transform: translateY(10%) ;
+             }
+        100% { opacity: 1;
+            transform: translateY(0%) ;
+            }
+      }
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}n){
+            $delay:200;
+            animation-delay: $delay * $i + ms;
+ 
+        }
+    }
+        
+}
+
+///////////////////CARD HOVER
+
+@mixin card_hover{
+    transform: scale(98.5%)!important;
+    transition:transform 0.2s ease-in-out;
+}
+
+@mixin btn_degrade{
+    background: linear-gradient(lighten($color-secondaire , 5%),lighten($color-primaire , 5%) );
+    transition: 0.2s ease-in-out;
+
+}
+ 
+///////////////////COEUR
+
+@mixin heart{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        position: relative;  
+        font-size: 30px;  
+        
+        .-empty{
+            z-index: 2;
+            position:absolute;
+            
+            color: black;   
+            
+            transition: opacity 0.35s ease-in-out;
+            transition-delay:0.5s;
+            opacity:1 ;      
+            
+            
+        }
+        .-full{
+            z-index: 0;
+            
+            position:absolute;
+            
+            font-weight: 900;
+            color: transparent;
+            
+            overflow: hidden;
+            
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            
+            background-image: linear-gradient(170deg, $color-secondaire 0%, $color-primaire 100%);
+            
+            transition: 0.35s ease-in-out;
+            
+            &::after{
+                content: "";
+                height: 150%;
+                width: 150%;
+                display: block;
+                
+                position:absolute;
+                top: 0px;
+                right: -5px;
+                
+                background: $color-fond_2;
+                
+
+                border-radius: 15px 15px 20px 15px;
+                
+                transition: 2.5s;
+            }
+            
+        }
+        
+        &:hover{
+            .-empty{
+                
+                opacity:0 ;      
+            }
+            .-full{
+                
+                &::after{
+                    transform: translateY(-101%) rotate(360deg);
+                }
+            } 
+        }
+    }
+@mixin inter_media{
+        @media screen and(max-width: $breakpoint-inter_media){
+            @content;
+        }
+}
+    
+@mixin laptop{
+    @media screen and(max-width: $breakpoint-laptop){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and(max-width: $breakpoint-mobile){
+        @content;
+    }
+}

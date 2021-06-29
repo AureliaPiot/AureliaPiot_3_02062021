@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    cursor: default;
+}
+a{
+    display:block ;
+    color: black;
+    text-decoration:none;
+
+}
+img{
+    display:block;
+}
+.-Y35{
+    object-position: 0 -35px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+main{
+    width: 90%;
+    margin: auto;
+    
+    @include mobile{
+        width: 100%;
+    }
+}
+
+ul{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+.-shadow{
+    box-shadow: 0 5px 15px rgb(0,0,0,0.250);
+    &:hover{
+        box-shadow: 0 5px 5px darken(rgb(0,0,0,0.250),10%);
+    }
+
+}
+.btn-colored{
+    border-radius: 25px;
+    background: linear-gradient($color-secondaire, $color-primaire);
+    &:hover{
+        @include btn_degrade;
+    }
+}
+.card{
+    border-radius:15px;
+    transition: 0.2s ease-in-out;
+
+    // &:hover{
+    //     @include card_hover;
+    // }
+}
+
+
+
