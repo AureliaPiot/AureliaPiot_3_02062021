@@ -1,6 +1,6 @@
 
 .loadingScreen{
-    // padding: 50px 0;
+
     display: flex;
     height: 100%;
     width: 100%;
@@ -16,9 +16,6 @@
 
 
     animation: loading 2.5s cubic-bezier(1,.01,.7,1)  forwards;
-    // -webkit-animation:loading 6s cubic-bezier(1,.01,.7,1)  forwards;
-    // -moz-animation:loading 6s cubic-bezier(1,.01,.7,1)  forwards;
-    // -o-animation:loading 6s cubic-bezier(1,.01,.7,1)  forwards;
 
     p{
         position: absolute;
