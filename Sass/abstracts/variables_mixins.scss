@@ -78,7 +78,7 @@ $breakpoint-mobile: 576px;
             
             overflow: hidden;
             
-            background-clip: text;
+            background-clip: content-box;
             -webkit-background-clip: text;
             -moz-background-clip: text;
             
@@ -121,7 +121,7 @@ $breakpoint-mobile: 576px;
     }
 
     //////////////////Mixin media queri
-    
+
 @mixin inter_media{
         @media screen and(max-width: $breakpoint-inter_media){
             @content;

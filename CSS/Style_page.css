@@ -314,7 +314,7 @@ h2::after {
   font-weight: 900;
   color: transparent;
   overflow: hidden;
-  background-clip: text;
+  background-clip: content-box;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);

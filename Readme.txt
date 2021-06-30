@@ -41,7 +41,12 @@ _____________________________________________
 
 -Le W3C peux renvoyer des avertissments concernant certaint prefix.avertissement qui previent l'utilisation de fonction propre à certains navigateurs, ce qui est normal.
 
--Le W3C renvois une erreur pour le "Background-clip:text" mais ça presence reste necessaire pour la version -webkit ! L'erreur n'est donc pas a prendre en compte !
+-Remplacement de "Background-clip:text" par "b "Background-clip:content-box" car la valeur text n'est pas valide sur W3C, mais ne derange pas avec les prefix "-webkit" et "moz".
+ce qui donne :
+            background-clip: content-box;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+"content-box" car ont a besoin d'une valeur de base.            
 
 - le fichier css appliqué est celui qui a été prefixier avec les commande " npm run prefix" pour le "style.css et "npm run prefix_page" pour le "style_page.css .
 
