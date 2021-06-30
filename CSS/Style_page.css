@@ -273,7 +273,7 @@ h2::after {
   color: white;
 }
 .section_plat section li .icon i {
-  transform: rotate(100deg);
+  transform: rotate(300deg);
 }
 
 .titre {
