@@ -164,7 +164,7 @@ footer a {
   text-align: center;
 }
 footer a:hover {
-  color: #ffc6ef;
+  cursor: pointer;
 }
 footer strong {
   font-weight: 400;

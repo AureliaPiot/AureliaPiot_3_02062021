@@ -50,7 +50,7 @@ footer{
         font-size: 1.2rem;
         text-align: center;
         &:hover{
-            color:lighten($color-secondaire,15%);
+            cursor: pointer;
         }
     }
 
