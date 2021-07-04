@@ -306,6 +306,7 @@ footer strong {
   width: 40%;
   margin: 20px auto;
   position: relative;
+  cursor: pointer;
 }
 @media screen and (max-width: 992px) {
   #restaurants ul li {
