@@ -145,7 +145,7 @@ footer strong {
   margin-top: -40px;
   padding: 20px 10px;
   border-radius: 35px 35px 0 0;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
 }
 
 h1 {
@@ -328,7 +328,7 @@ h2::after {
   position: absolute;
   top: 0px;
   right: -5px;
-  background: #EAEAEA;
+  background: #F6F6F6;
   border-radius: 15px 15px 20px 15px;
   transition: 2.5s;
 }
