@@ -153,11 +153,6 @@ h2{
         margin: auto;
 
     }
-    @include mobile{
-        width: 100%;
-
-    }
-
     .icone{
         margin-right: 25px;
         @include heart
