@@ -3,7 +3,7 @@
     padding: 1.5rem 1.5rem 5rem;
 
 
-    @include laptop{
+    @include tablet{
         padding: 1.5rem;
     }
     
@@ -16,7 +16,7 @@
         margin: 20px auto;
         position: relative;
 
-        @include laptop{
+        @include tablet{
             width: 45%;
 
         }
@@ -52,7 +52,7 @@
         border-radius: 15px 15px 0 0;
         object-fit: cover;
         
-        @include laptop{
+        @include tablet{
             height: 20vw;
         }
         @include mobile{
