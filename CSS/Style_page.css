@@ -174,7 +174,7 @@ h2::after {
   justify-content: space-evenly;
   column-gap: 50px;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
   .section_plat {
     width: 70%;
     margin: auto;
@@ -281,7 +281,7 @@ h2::after {
   justify-content: space-between;
   padding: 10px;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
   .titre {
     width: 70%;
     margin: auto;
