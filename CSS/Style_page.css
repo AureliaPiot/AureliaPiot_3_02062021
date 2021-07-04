@@ -287,6 +287,11 @@ h2::after {
     margin: auto;
   }
 }
+@media screen and (max-width: 576px) {
+  .titre {
+    width: 95%;
+  }
+}
 .titre .icone {
   margin-right: 25px;
   display: flex;
